@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield AI | AI-Powered Cyber Security</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="matrix-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#scanner" class="nav-link">Scanner</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Defend Your Digital World</h1>
+            <h2 class="hero-subtitle">AI-Powered Cyber Security Hub</h2>
+            <p class="hero-description">
+                Protect your digital assets with our advanced AI-driven security solutions. 
+                Detect threats before they harm your systems with real-time monitoring and advanced pattern recognition.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('scanner')">Start Scanning</button>
+                <button class="btn-secondary" onclick="scrollToSection('features')">Learn More</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">99.7%</div>
+                    <div class="stat-label">Threat Detection</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Protection</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50ms</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="cyber-orb">
+                <div class="orb-core"></div>
+                <div class="orb-ring orb-ring-1"></div>
+                <div class="orb-ring orb-ring-2"></div>
+                <div class="orb-ring orb-ring-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Security Features</h2>
+                <p class="section-subtitle">Advanced AI-powered threat detection tools</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="feature-title">Phishing URL Detector</h3>
+                    <p class="feature-description">
+                        Analyze URLs in real-time to identify phishing attempts and malicious websites using advanced pattern recognition.
+                    </p>
+                    <div class="feature-emoji">🔗</div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <h3 class="feature-title">File Scanner</h3>
+                    <p class="feature-description">
+                        Detect malware in various file types including .exe, .pdf, .docx and more with heuristic analysis.
+                    </p>
+                    <div class="feature-emoji">📁</div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="feature-title">Video Activity Detection</h3>
+                    <p class="feature-description">
+                        Advanced AI analysis of video content for suspicious or harmful activities using computer vision.
+                    </p>
+                    <div class="feature-emoji">🎥</div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="feature-title">Spam Email Detection</h3>
+                    <p class="feature-description">
+                        Identify spam and phishing emails with our ML-powered text analysis and behavioral patterns.
+                    </p>
+                    <div class="feature-emoji">📧</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scanner Section -->
+    <section id="scanner" class="scanner">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Threat Scanner</h2>
+                <p class="section-subtitle">AI-Powered Security Analysis Tools</p>
+            </div>
+            
+            <!-- Smart Upload Zone -->
+            <div class="scanner-section">
+                <h3 class="scanner-title">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    Smart Upload Zone
+                </h3>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-content">
+                        <i class="fas fa-file-upload"></i>
+                        <h4>Drag & Drop Any File</h4>
+                        <p>URL, text, image, video, document - AI scans automatically</p>
+                        <button class="btn-outline" onclick="document.getElementById('fileInput').click()">
+                            Or Select Files
+                        </button>
+                        <input type="file" id="fileInput" multiple style="display: none;" onchange="handleFileSelect(this.files)">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Individual Tools -->
+            <div class="tools-grid">
+                <!-- Phishing URL Detector -->
+                <div class="tool-card">
+                    <h3 class="tool-title">🔗 Phishing URL Detector</h3>
+                    <div class="tool-input">
+                        <input type="text" id="urlInput" placeholder="Enter URL to analyze...">
+                        <button class="btn-tool" onclick="analyzeURL()">
+                            <i class="fas fa-search"></i> Analyze
+                        </button>
+                    </div>
+                    <div class="tool-result" id="urlResult">
+                        <p>Enter a URL to check for phishing attempts</p>
+                    </div>
+                </div>
+                
+                <!-- File Scanner -->
+                <div class="tool-card">
+                    <h3 class="tool-title">📁 File Scanner</h3>
+                    <div class="tool-input">
+                        <input type="file" id="fileScanInput" accept=".exe,.pdf,.docx,.doc,.zip,.rar">
+                        <button class="btn-tool" onclick="scanFile()">
+                            <i class="fas fa-shield-alt"></i> Scan File
+                        </button>
+                    </div>
+                    <div class="tool-result" id="fileResult">
+                        <p>Upload a file to scan for malware</p>
+                    </div>
+                </div>
+                
+                <!-- Spam Email Detector -->
+                <div class="tool-card">
+                    <h3 class="tool-title">📧 Spam Email Detection</h3>
+                    <div class="tool-input">
+                        <textarea id="emailInput" placeholder="Paste email content here..."></textarea>
+                        <button class="btn-tool" onclick="detectSpam()">
+                            <i class="fas fa-envelope"></i> Check Email
+                        </button>
+                    </div>
+                    <div class="tool-result" id="emailResult">
+                        <p>Paste email content to check for spam</p>
+                    </div>
+                </div>
+                
+                <!-- Video Activity Detection -->
+                <div class="tool-card">
+                    <h3 class="tool-title">🎥 Suspicious Video Detection</h3>
+                    <div class="tool-input">
+                        <input type="file" id="videoInput" accept="video/*">
+                        <button class="btn-tool" onclick="analyzeVideo()">
+                            <i class="fas fa-play-circle"></i> Analyze Video
+                        </button>
+                    </div>
+                    <div class="tool-result" id="videoResult">
+                        <p>Upload a video to analyze for suspicious activity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About CyberShield AI</h2>
+                <p class="section-subtitle">Advanced AI-Powered Cyber Security Solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Protecting Your Digital Frontier</h3>
+                    <p>
+                        CyberShield AI leverages cutting-edge machine learning algorithms to detect and neutralize 
+                        cyber threats in real-time. Our platform combines advanced pattern recognition with behavioral 
+                        analysis to provide comprehensive protection against evolving digital threats.
+                    </p>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python/Flask</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript/React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>TensorFlow AI</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Neural Networks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">99.7%</div>
+                        <div class="stat-label">Threat Detection Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Real-time Monitoring</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">50ms</div>
+                        <div class="stat-label">Average Response Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch with our security experts</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@cybershield.ai</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 91514 12157</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Lucknow, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CyberShield AI</h3>
+                    <p>Advanced AI-powered cyber security solutions for the modern digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#scanner">Scanner</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Security Tools</h4>
+                    <ul>
+                        <li><a href="#scanner">Phishing Detector</a></li>
+                        <li><a href="#scanner">File Scanner</a></li>
+                        <li><a href="#scanner">Email Analysis</a></li>
+                        <li><a href="#scanner">Video Detection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@cybershield.ai</li>
+                        <li><i class="fas fa-phone"></i> +91 91514 12157</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lucknow, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CyberShield AI. All rights reserved. | Protecting the Digital Frontier</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
